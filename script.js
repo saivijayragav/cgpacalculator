@@ -1,18 +1,42 @@
-let dict = {'PDS':3, 'DSD':3, 'PDSLab':1, 'DSDLab':1,'BEEE':3,
-    'Comm. lab':1,'EG':4,'English':2,'SNM':4
+let sem1 = {'chem':3,'chemlab':1, 'c':3,'clab':1,'english':3,
+    'maths':4,'phys':3,'physlab':1,'epl':1
 };
+let sem2 = {
+'pds':3, 'dsd':3, 'pdslab':1, 'dsdlab':1,'beee':3,
+    'englab':1,'eg':4,'eng':2,'snm':4,
+}
+var sem_1 = 0
+function sem_1calc(){
+    var keys = Object.keys(sem1);
+    var cgg = 0
+    var credits = 0
+    for(var i = 0; i<keys.length;i++){
+        var grade = Number(document.getElementById(keys[i]).value)
+        var credit = sem1[keys[i]];
+        cgg += grade * credit;
+        credits += credit;
+    }
+    sem_1 = cgg/credits;
+    sessionStorage.setItem('sem1', sem_1);    
+}
 
-function calc(){
-    var pds = Number(document.getElementById("pds").value)*dict['PDS'];
-    var dsd = Number(document.getElementById("dsd").value)*dict['DSD']
-    var pdslab = Number(document.getElementById("pdslab").value)*dict['PDSLab']
-    var dsdlab = Number(document.getElementById("dsdlab").value)*dict['DSDLab']
-    var beee = Number(document.getElementById("beee").value)*dict['BEEE']
-    var englab = Number(document.getElementById("englab").value)*dict['Comm. lab']
-    var eg = Number(document.getElementById("eg").value)*dict['EG']
-    var eng = Number(document.getElementById("eng").value)*dict['English']
-    var snm = Number(document.getElementById("snm").value)*dict['SNM']
-    var cgpa = (pds+dsd+pdslab+dsdlab+beee+englab+eg+eng+snm)/22
-    document.getElementById('credits').innerHTML = 'CGPA: ' + cgpa.toFixed(3);
-    
+var sem_2 = 0
+function sem_2calc(){
+    var keys = Object.keys(sem2);
+    var cgg = 0
+    var credits = 0
+    for(var i = 0; i<keys.length;i++){
+        var grade = Number(document.getElementById(keys[i]).value)
+        var credit = sem2[keys[i]];
+        cgg += grade * credit;
+        credits += credit;
+    }
+    sem_2 = cgg/credits;
+    sessionStorage.setItem('sem2', sem_2);
+    console.log(sessionStorage.getItem('sem1'))
+}
+
+function result(){
+    document.getElementById('res').innerHTML = "Your CGPA is " +
+    ((Number(sessionStorage.getItem('sem1')) + Number(sessionStorage.getItem('sem2')))/2).toFixed(2);
 }
