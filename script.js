@@ -37,6 +37,18 @@ function sem_2calc(){
 }
 
 function result(){
-    document.getElementById('res').innerHTML = "Your CGPA is " +
-    ((Number(sessionStorage.getItem('sem1')) + Number(sessionStorage.getItem('sem2')))/2).toFixed(2);
+    var cgpa = ((Number(sessionStorage.getItem('sem1')) + Number(sessionStorage.getItem('sem2')))/2).toFixed(2)
+    if(cgpa > 9){
+        document.getElementById('res').innerHTML = "Your CGPA is " + cgpa +' 😒';
+    }
+    else if(cgpa > 8.5){
+        document.getElementById('res').innerHTML = "Your CGPA is " + cgpa +' 🥳';
+    }
+    else if(cgpa > 8){
+        document.getElementById('res').innerHTML = "Your CGPA is " + cgpa +' 🔥';
+    }
+    else{
+        document.getElementById('res').innerHTML = "Your CGPA is " + cgpa;
+    }
+    
 }
