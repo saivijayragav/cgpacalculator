@@ -1,4 +1,4 @@
-body{
+body {
     display: flex;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
@@ -7,28 +7,30 @@ body{
     justify-content: center;
     background-color: rgb(214, 206, 206);
     align-content: center;
+    gap: 10px;
 }
-.cont{
-    display:flex;
+
+.cont {
+    display: flex;
     align-items: center;
     justify-content: center;
     align-content: center;
     width: 100%;
     flex-wrap: wrap;
-    height: 80vh;
+    height: auto; /* Change from 70vh to auto */
     background-color: rgb(214, 206, 206);
     gap: 30px;
 }
 
-.cont div{
-    padding: 30px;
+.cont div {
+    padding: 20px; /* Reduce padding */
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
-    gap: 50px;
-    width: 150px;
-    height: 150px;
+    gap: 20px; /* Reduce gap */
+    width: 120px; /* Adjust width */
+    height: 120px; /* Adjust height */
     background-color: black;
     border-radius: 25%;
     color: white;
@@ -36,13 +38,25 @@ body{
     align-content: center;
 }
 
+@media (max-width: 600px) {
+    .cont {
+        gap: 10px; /* Reduce gap further for small screens */
+    }
+
+    .cont div {
+        padding: 10px; /* Reduce padding for small screens */
+        width: 100px; /* Adjust width for small screens */
+        height: 100px; /* Adjust height for small screens */
+        font-size: 1.2rem; /* Adjust font size for small screens */
+    }
+}
+
 select {
     background-color: rgb(233, 228, 228);
     border-radius: 25px;
-  }
+}
 
-#bt{
-    
+#bt {
     background-color: white;
     height: 50px;
     width: 100px;
