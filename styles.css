@@ -12,7 +12,9 @@ body {
 
 .cont {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
     width: 100%;
     flex-wrap: wrap;
     height: auto; 
@@ -21,6 +23,8 @@ body {
 }
 .res{
     position: absolute;
+    display: flex;
+    flex-direction: column;
     top:10%;
 }
 .cont div {
@@ -65,4 +69,3 @@ select {
     align-self: center;
     margin-bottom: 0;
 }
-
