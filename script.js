@@ -93,8 +93,8 @@ function result(){
     document.getElementById('gp3').innerHTML = "Your SEM-3 GPA is " + (gp3).toFixed(2);
     }
     var cgpa = (( gp1 + gp2 + gp3)/3).toFixed(2)
-    if(cgpa > 9){
-        document.getElementById('res').innerHTML = "Your CGPA is " + cgpa +' 😒';
+    if(cgpa > 8.7){
+        document.getElementById('res').innerHTML = "Your CGPA is " + cgpa +' 💀(touch some grass bro)';
     }
     else if(cgpa > 8.5){
         document.getElementById('res').innerHTML = "Your CGPA is " + cgpa +' 🥳';
