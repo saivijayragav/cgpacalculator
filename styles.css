@@ -10,6 +10,23 @@ body {
     gap: 50px;
 }
 
+
+#middle{
+    display: flex;
+    color: white;
+    position: absolute;
+    height: 100px;
+    width: 300px;
+    top: 50%;
+    margin: auto;
+    background-color: black;
+    text-align: center;
+    align-items: center;
+    border-radius: 25px;
+    padding: 25px;
+    column-gap: 20px;
+    bottom: 50%;
+}
 .cont {
     display: flex;
     align-items: center;
