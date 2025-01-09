@@ -5,129 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CGPA Calculator</title>
     <link rel="stylesheet" href="styles.css"/>
+
 </head>
 <body>
-    <div id="he"><h1>SEM 1</h1></div>
-    <div class="cont">
-    <div>Chemistry
-        <select name="pds" id="chem">
-            <option value="0">Grade </option>
-            <option value="10">O</option>
-            <option value="9">A+</option>
-            <option value="8">A</option>
-            <option value="7">B+</option>
-            <option value="6">B</option>
-            <option value="5">C+</option>
-            <option value="4">C</option>
-            <option value="0">U</option>
-          </select>
-    </div>
-    <div>Chemistry Lab
-        <select name="pds" id="chemlab">
-            <option value="0">Grade </option>
-            <option value="10">O</option>
-            <option value="9">A+</option>
-            <option value="8">A</option>
-            <option value="7">B+</option>
-            <option value="6">B</option>
-            <option value="5">C+</option>
-            <option value="4">C</option>
-            <option value="0">U</option>
-          </select>
-    </div>
-    <div>C Programming
-        <select name="pds" id="c">
-            <option value="0">Grade </option>
-            <option value="10">O</option>
-            <option value="9">A+</option>
-            <option value="8">A</option>
-            <option value="7">B+</option>
-            <option value="6">B</option>
-            <option value="5">C+</option>
-            <option value="4">C</option>
-            <option value="0">U</option>
-          </select>
-    </div>
-    <div>C Lab
-        <select name="pds" id="clab">
-            <option value="0">Grade </option>
-            <option value="10">O</option>
-            <option value="9">A+</option>
-            <option value="8">A</option>
-            <option value="7">B+</option>
-            <option value="6">B</option>
-            <option value="5">C+</option>
-            <option value="4">C</option>
-            <option value="0">U</option>
-          </select>
-    </div>
-    <div>EPL
-        <select name="pds" id="epl">
-            <option value="0">Grade </option>
-            <option value="10">O</option>
-            <option value="9">A+</option>
-            <option value="8">A</option>
-            <option value="7">B+</option>
-            <option value="6">B</option>
-            <option value="5">C+</option>
-            <option value="4">C</option>
-            <option value="0">U</option>
-          </select>
-    </div>
-    <div>English
-        <select name="pds" id="english">
-            <option value="0">Grade </option>
-            <option value="10">O</option>
-            <option value="9">A+</option>
-            <option value="8">A</option>
-            <option value="7">B+</option>
-            <option value="6">B</option>
-            <option value="5">C+</option>
-            <option value="4">C</option>
-            <option value="0">U</option>
-          </select>
-    </div>
-    <div>Matrices and Calculus
-        <select name="pds" id="maths">
-            <option value="0">Grade </option>
-            <option value="10">O</option>
-            <option value="9">A+</option>
-            <option value="8">A</option>
-            <option value="7">B+</option>
-            <option value="6">B</option>
-            <option value="5">C+</option>
-            <option value="4">C</option>
-            <option value="0">U</option>
-          </select>
-    </div>
-    <div>Physics
-        <select name="chem" id="phys">
-            <option value="0">Grade </option>
-            <option value="10">O</option>
-            <option value="9">A+</option>
-            <option value="8">A</option>
-            <option value="7">B+</option>
-            <option value="6">B</option>
-            <option value="5">C+</option>
-            <option value="4">C</option>
-            <option value="0">U</option>
-          </select>
-    </div>
-    <div>Physics Lab
-        <select name="pds" id="physlab">
-            <option value="0">Grade </option>
-            <option value="10">O</option>
-            <option value="9">A+</option>
-            <option value="8">A</option>
-            <option value="7">B+</option>
-            <option value="6">B</option>
-            <option value="5">C+</option>
-            <option value="4">C</option>
-            <option value="0">U</option>
-          </select>
-    </div>
-</div>
-<a href="sem2.html"><button id="bt" onclick="sem_1calc()">Next</button></a>
-<script src="script.js" ></script>
+    <section id="middle">
+        <h1>Calculate From SEM</h1>
+        <select name="SEM" id="semester">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+        
+    </section>
+    <button id="bt" style="position: absolute; bottom: 20%;" onclick="chooser()">Next</button>
+    <script src="script.js"></script>
 </body>
 </html>
