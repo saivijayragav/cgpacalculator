@@ -10,10 +10,9 @@ let sem3 = {
     'ai':3, 'oops':3, 'dbms':3, 'dpco':4,'dm':4,
         'ailab':1,'oopslab':1,'dbmslab':1,'datawrangling':1,
     }
-sessionStorage.setItem('sem3starting', false)
+
 function chooser(){
     var sem = Number(document.getElementById('semester').value);
-    console.log(sem)
     if (sem==1){
         location.replace("sem1.html")
     }else if(sem==2){
@@ -31,7 +30,7 @@ function sem3start(){
     var gpa = Number(document.getElementById('sem3start').value)
     sessionStorage.setItem('sem1', gpa);
     sessionStorage.setItem('sem2', gpa)
-    sessionStorage.setItem('sem3starting', true)
+    sessionStorage.setItem('sem3starting', 'true')
     location.replace('sem3.html')
 }
 var sem_1 = 0
@@ -46,7 +45,9 @@ function sem_1calc(){
         credits += credit;
     }
     sem_1 = cgg/credits;
-    sessionStorage.setItem('sem1', sem_1);    
+    sessionStorage.setItem('sem1', sem_1);   
+    sessionStorage.setItem('sem3starting', 'false')
+ 
 }
 
 var sem_2 = 0
@@ -62,6 +63,8 @@ function sem_2calc(){
     }
     sem_2 = cgg/credits;
     sessionStorage.setItem('sem2', sem_2);
+    sessionStorage.setItem('sem3starting', 'false')
+
 }
 
 var sem_3 = 0
@@ -76,15 +79,15 @@ function sem_3calc(){
         credits += credit;
     }
     sem_3 = cgg/credits;
+
     sessionStorage.setItem('sem3', sem_3);    
 }
 function result(){
     var gp1 = Number(sessionStorage.getItem('sem1'))
     var gp2 = Number(sessionStorage.getItem('sem2'))
     var gp3 = Number(sessionStorage.getItem('sem3'))
-    console.log(sessionStorage.getItem('sem3starting'))
     if(sessionStorage.getItem('sem3starting')=='true'){
-        document.getElementById('gp1').innerHTML = "Your CGPA till is" + (gp1).toFixed(2);
+        document.getElementById('gp1').innerHTML = "Your CGPA till is " + (gp1).toFixed(2);
     document.getElementById('gp2').innerHTML = "Your SEM-3 GPA is " + (gp3).toFixed(2);
     }
     else{
