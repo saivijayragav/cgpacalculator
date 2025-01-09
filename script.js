@@ -87,7 +87,7 @@ function result(){
     var gp2 = Number(sessionStorage.getItem('sem2'))
     var gp3 = Number(sessionStorage.getItem('sem3'))
     if(sessionStorage.getItem('sem3starting')=='true'){
-        document.getElementById('gp1').innerHTML = "Your CGPA till is " + (gp1).toFixed(2);
+        document.getElementById('gp1').innerHTML = "Your CGPA till SEM-2 is " + (gp1).toFixed(2);
     document.getElementById('gp2').innerHTML = "Your SEM-3 GPA is " + (gp3).toFixed(2);
     }
     else{
