@@ -139,14 +139,24 @@ select:focus {
 
 .res {
     flex-direction: column;
-    gap: 12px;
+    gap: 16px;
     align-items: center;
+}
+
+.res > div {
+    min-width: auto;
+    max-width: none;
+    flex: none;
+    border: none;
+    background: none;
+    padding: 0;
+    width: auto;
 }
 
 .res #semGpas {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
     width: 100%;
     align-items: center;
 }
@@ -159,7 +169,7 @@ select:focus {
     color: #475569;
     font-size: 1rem;
     font-weight: 500;
-    min-width: 260px;
+    min-width: 280px;
     text-align: center;
 }
 
@@ -171,6 +181,7 @@ select:focus {
     font-size: 1.35rem;
     font-weight: 700;
     text-align: center;
+    min-width: 280px;
 }
 
 @media (max-width: 768px) {
